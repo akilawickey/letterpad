@@ -17,9 +17,9 @@ import Routes from "./Routes";
 
 const context = {};
 
-export default (req, client, config) => {
+export default (url, client, config) => {
   const opts = {
-    location: req.url,
+    location: url,
     context: context,
     basename: config.baseName.replace(/\/$/, ""), // remove the last slash
   };
