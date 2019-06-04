@@ -10,6 +10,7 @@ import General from "./General";
 import Social from "./Social";
 import Optional from "./Optional";
 import Messages from "./Messages";
+import Github from "./Github";
 
 import StyledSection from "../../components/section";
 // import StyledCard from "../../components/card";
@@ -94,6 +95,7 @@ class Settings extends Component {
             data={data}
             updateOption={this.setOption}
           />
+          <Github label="github" data={data} updateOption={this.setOption} />
           <br />
           <br />
           <Button success onClick={this.submitData}>

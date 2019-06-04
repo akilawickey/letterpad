@@ -32,6 +32,16 @@ const link = ApolloLink.from([errorLink, httpLink]);
 module.exports.init = app => {
   app.get("*", (req, res, next) => {
     if (req.url === "/graphql") return next();
+    if (req.url === "/generate-static-site") {
+      const exec = require("child_process").exec;
+      exec("./client/generate.sh", (error, stdout, stderr) => {
+        console.log(stdout);
+        if (error !== null) {
+          console.log(`exec error: ${error}`);
+        }
+        res.send("done");
+      });
+    }
     // using the apolloclient we can fetch data from the backend
     const client = new ApolloClient({
       ssrMode: true,

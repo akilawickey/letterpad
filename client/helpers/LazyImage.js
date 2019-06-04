@@ -26,6 +26,10 @@ class LazyImage extends Component {
   }
 
   render() {
+    if (typeof window === "undefined") {
+      // probably server request
+      return <img src={this.props.src} width={this.props.width} />;
+    }
     if (!this.state.loaded) {
       return (
         <img
