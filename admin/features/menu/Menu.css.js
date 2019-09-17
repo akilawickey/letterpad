@@ -12,7 +12,7 @@ const StyledMenu = styled.div`
     width: 96%;
 
     li.active a {
-      color: rgba(var(--color-accent));
+      color: var(--color-accent);
     }
     > li a {
       text-decoration: none;
@@ -72,7 +72,7 @@ const StyledMenu = styled.div`
     > li > a {
       &:hover {
         background: transparent;
-        color: rgba(var(--color-accent));
+        color: var(--color-accent);
       }
       &:focus {
         background: transparent;

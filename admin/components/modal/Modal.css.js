@@ -48,7 +48,7 @@ const StyledModal = styled.div`
   .modal-wrapper {
     height: 100%;
     display: grid;
-    grid-template-rows: 52px minmax(min-content, max-content) 52px;
+    grid-template-rows: 52px auto 52px;
     top: 0px;
     left: 0px;
     height: 100vh;
@@ -73,7 +73,7 @@ const StyledModal = styled.div`
     }
     .modal-body {
       overflow-y: auto;
-      max-height: calc(100vh - 240px);
+      max-height: calc(100vh - 110px);
       padding: 40px 16px;
       text-align: center;
     }

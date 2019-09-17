@@ -29,7 +29,7 @@ const StyledRadio = styled.div`
       &:checked {
         + .radio-label {
           &:before {
-            background-color: rgba(var(--color-accent));
+            background-color: var(--color-accent);
           }
         }
       }

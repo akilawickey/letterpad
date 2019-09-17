@@ -7,7 +7,7 @@ const StyledLink = styled(Link)`
   color: rgba(var(--color-accent), 0.8);
   ${props => props.normal && "text-decoration: none;color: var(--color-base)"};
   &:hover {
-    color: rgba(var(--color-accent), 1);
+    color: var(--color-accent);
   }
 `;
 

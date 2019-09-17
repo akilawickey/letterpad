@@ -203,7 +203,7 @@ class ArticleList extends Component {
               count={this.props.posts.count}
               page={this.props.page}
               changePage={this.props.changePage}
-              limit={10}
+              limit={20}
             />
           )}
         </div>

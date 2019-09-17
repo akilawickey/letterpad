@@ -64,7 +64,6 @@ class EditMediaInfo extends Component {
   };
 
   updateMedia = async e => {
-    e.persist();
     // get the old values
     const { name, description } = this.props.media;
     // compare with current state to see if there is a change.

@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
+  text-align: left;
   label {
     color: var(--base-shade-3);
     font-weight: 500;

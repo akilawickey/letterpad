@@ -1,12 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { translate } from "react-i18next";
 
 import ModalHoc from "../../components/modal";
 import StyledInput from "../../components/input";
 import StyledButton from "../../components/button";
 
-const EditMenuModal = (props, context) => {
-  const { t } = context;
+const EditMenuModal = props => {
+  const { t } = props;
   return (
     <ModalHoc confirm onClose={props.onClose} title={props.title}>
       <div className="modal-body">
@@ -48,10 +49,7 @@ EditMenuModal.propTypes = {
   changeItemProperty: PropTypes.func.isRequired,
   onClose: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
-};
-
-EditMenuModal.contextTypes = {
   t: PropTypes.func,
 };
 
-export default EditMenuModal;
+export default translate("translations")(EditMenuModal);
